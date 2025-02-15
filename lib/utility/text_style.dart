@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyle {
   static final TextStyle headingLarge = GoogleFonts.poppins(
-    fontSize: 64,
+    fontSize: 50,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
@@ -39,7 +39,7 @@ class AppTextStyle {
   );
 
   static final TextStyle allDescription = GoogleFonts.poppins(
-    fontSize: 10,
+    fontSize: 14,
     color: Colors.white,
   );
 }

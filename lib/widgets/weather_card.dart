@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/models/weather_model.dart';
-import 'package:weather_app/utility/app_color.dart';
 import 'package:weather_app/utility/text_style.dart';
 
 class WeatherCard extends StatelessWidget {
@@ -37,12 +36,12 @@ class WeatherCard extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [_Humidity(), _Wind()],
+                children: [_humidity(), _wind()],
               ),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [_Sunrise(), _Sunset()],
+                children: [_sunrise(), _sunset()],
               ),
             ],
           ),
@@ -80,21 +79,21 @@ class WeatherCard extends StatelessWidget {
     return Text(weather.description, style: AppTextStyle.allDescription);
   }
 
-  Widget _Humidity() {
+  Widget _humidity() {
     return Text(
       'Humidity: ${weather.humidity}%',
       style: AppTextStyle.allDescription,
     );
   }
 
-  Widget _Wind() {
+  Widget _wind() {
     return Text(
       'Wind: ${weather.windSpeed} m/s',
       style: AppTextStyle.allDescription,
     );
   }
 
-  Widget _Sunrise() {
+  Widget _sunrise() {
     return Column(
       children: [
         const Icon(Icons.wb_sunny_outlined, color: Colors.blue),
@@ -104,7 +103,7 @@ class WeatherCard extends StatelessWidget {
     );
   }
 
-  Widget _Sunset() {
+  Widget _sunset() {
     return Column(
       children: [
         const Icon(Icons.nights_stay_outlined, color: Colors.blue),
